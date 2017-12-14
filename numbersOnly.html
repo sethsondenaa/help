@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript">
+            "use strict";
+
+            var input = ["apple", "banana"];
+            var newArray = copy(input);
+            console.log(input);
+            console.log(newArray);
+            remove(input);
+            console.log(input);
+
+            function copy(array) {
+                var copy = [];
+                for(var i = 0; i < array.length; i++) {
+                    if(typeof array[i] === "number") {
+                        copy.push(array[i]);
+                    }
+                }
+                return copy;
+            }
+
+            function remove(input) {
+                for(var i = 0; i < input.length; i++) {
+                    if(typeof input[i] !== "number") {
+                        input.splice(i,1);
+                    }
+                }
+            }
+
+
+
+
+
+
+
+        </script>
+    </head>
+</html>
