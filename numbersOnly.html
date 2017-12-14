@@ -6,7 +6,7 @@
         <script type="text/javascript">
             "use strict";
 
-            var input = ["apple", "banana"];
+            var input = ["apple", 1, "orange", 3, "banana", 5, "grape", "kiwi", 0.5];
             var newArray = copy(input);
             console.log(input);
             console.log(newArray);
@@ -24,7 +24,9 @@
             }
 
             function remove(input) {
-                for(var i = 0; i < input.length; i++) {
+            //    for(var i = 0; i < input.length; i++) {
+                var loops = input.length;
+                for(var i = loops; i >= 0; i--) {
                     if(typeof input[i] !== "number") {
                         input.splice(i,1);
                     }
